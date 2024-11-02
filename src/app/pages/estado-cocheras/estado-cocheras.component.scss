@@ -1,9 +1,11 @@
+@use "./../../../../public/styles/colores.scss";
+
 .flex-column-center {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 2rem;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: colores.$color-fondo;
   min-height: 100vh;
   background-image: url('../../../../public/img/autos-3.jpg'); 
   background-size: cover; 
@@ -23,7 +25,7 @@
 
   .header-tabla {
     display: flex;
-    background-color: #001f3f;
+    background-color: colores.$color-principal;
     color: #ffffff;
 
     .header-item {
@@ -52,12 +54,12 @@
       color: #333;
 
       .disponible {
-        color: #28a745; 
+        color: colores.$color-correcto; 
         cursor: pointer;
         transition: color 0.3s;
         
         &:hover {
-          color: #218838; 
+          color: colores.$color-correcto; 
         }
       }
 
@@ -101,7 +103,7 @@
 }
 
 .boton-resaltado {
-  background-color: #28a745; 
+  background-color: colores.$color-correcto; 
   color: white;
   border: none;
   border-radius: 50%;
@@ -115,7 +117,7 @@
   transition: background-color 0.3s, transform 0.2s;
 
   &:hover {
-    background-color: #218838; 
+    background-color: colores.$color-correcto; 
     transform: scale(1.05); 
   }
 

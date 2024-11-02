@@ -9,7 +9,7 @@ body {
     background-repeat: no-repeat;
     min-height: 100vh;
     margin: 0;
-    background-color: rgba(0, 31, 63, 0.8); /* Fondo oscuro */
+    background-color: colores.$color-principal; 
 
     .flex-column-center {
         display: flex;
@@ -34,7 +34,7 @@ body {
 
             .header-tabla {
                 display: flex; /* Elementos alineados horizontalmente */
-                background-color: #001f3f; /* Fondo oscuro para el encabezado */
+                background-color: colores.$color-principal; /* Fondo oscuro para el encabezado */
                 color: #ffffff;
                 padding: 1rem; /* Espacio alrededor del encabezado */
                 font-size: 1.5rem;

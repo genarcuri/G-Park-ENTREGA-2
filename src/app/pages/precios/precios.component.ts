@@ -36,18 +36,18 @@ export class PreciosComponent {
   async updateTarifas(tarifasId: string) {
     const { value } = await Swal.fire({
       title: "Ingrese el monto al que quiere actualizar",
-      input: "number", // Configura el input como tipo número
-      inputLabel: "Monto", // Opcional: puedes agregar un label para aclarar el input
+      input: "number", 
+      inputLabel: "Monto", 
       showCancelButton: true,
       inputValidator: (value) => {
         if (!value) {
-          return "Tienes que escribir algo"; // Mensaje de error si el valor está vacío  
+          return "Tienes que escribir algo";  
         }
-        return null; // Retorna null si el valor es válido
+        return null; 
       },
     });
   
-    if (value) { // Solo proceder si hay un valor
+    if (value) { 
       fetch(`http://localhost:9000/tarifas/${tarifasId}`, {
         method: "PUT",
         headers: {
