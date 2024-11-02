@@ -1,0 +1,26 @@
+
+    <app-header></app-header>
+
+<body>
+    <main class="flex-column-center">
+        <div class="tabla">
+            <div class="header-tabla">
+                <div class="header-item">TIEMPO</div>    
+                <div class="header-item">COSTO</div>    
+                <div class="header-item">ACCIONES</div>    
+            </div>
+            
+            @for (tarifa of tarifas; track $index) {
+                <div class="table-row">    
+                    <div class="table-cell">{{tarifa.id}}</div>
+                    <div class="table-cell">{{tarifa.valor}}</div>
+                    <div class="table-cell acciones-container">
+                        <button (click)="updateTarifas(tarifa.id)" class="action-button">
+                            <img src="../../../../public/img/icons/gratis-png-lapiz-de-color-lapiz.png" alt="Editar">
+                        </button>
+                    </div>
+                </div>
+            }
+        </div>
+    </main>
+</body>

@@ -1,0 +1,125 @@
+.flex-column-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.7);
+  min-height: 100vh;
+  background-image: url('../../../../public/img/autos-3.jpg'); 
+  background-size: cover; 
+  background-position: center; 
+  background-blend-mode: overlay;
+  
+}
+
+.tabla {
+  width: 100%;
+  max-width: 1200px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-bottom: 2rem;
+
+  .header-tabla {
+    display: flex;
+    background-color: #001f3f;
+    color: #ffffff;
+
+    .header-item {
+      flex: 1;
+      padding: 1rem;
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.1rem;
+      border-bottom: 2px solid #0056b3; 
+    }
+  }
+
+  .table-row {
+    display: flex;
+    border-bottom: 1px solid #e0e0e0;
+    
+    &:hover {
+      background-color: #f1f1f1; 
+    }
+
+    .table-cell {
+      flex: 1;
+      padding: 1rem;
+      text-align: center;
+      font-size: 1rem;
+      color: #333;
+
+      .disponible {
+        color: #28a745; 
+        cursor: pointer;
+        transition: color 0.3s;
+        
+        &:hover {
+          color: #218838; 
+        }
+      }
+
+      .activo {
+        color: #007bff; 
+        cursor: pointer;
+        transition: color 0.3s;
+
+        &:hover {
+          color: #0056b3; 
+        }
+      }
+
+      .ocupado {
+        color: #dc3545; 
+      }
+    }
+  }
+}
+
+.acciones-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+
+  .action-button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s;
+
+    &:hover {
+      transform: scale(1.1); 
+    }
+
+    img {
+      width: 24px; 
+      height: 24px;
+    }
+  }
+}
+
+.boton-resaltado {
+  background-color: #28a745; 
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, transform 0.2s;
+
+  &:hover {
+    background-color: #218838; 
+    transform: scale(1.05); 
+  }
+
+  #agregar-cochera {
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,12 @@
+<header class="header">
+    <div class="header__container">
+      <h1 class="header__title">G-Park</h1>
+      <nav class="header__nav">
+        <a [routerLink]="['/estado-cocheras']" routerLinkActive="active" class="header__link">Estado de cocheras</a>
+        <a [routerLink]="['/reportes']" routerLinkActive="active" class="header__link">Reportes</a>
+        <a [routerLink]="['/precios']" routerLinkActive="active" class="header__link">Precios</a>
+       
+      </nav>
+<a [routerLink]="['/login']" class="header__modal-btn"  (click)="abrirModal()">Cerrar sesión</a>
+    </div>
+  </header>

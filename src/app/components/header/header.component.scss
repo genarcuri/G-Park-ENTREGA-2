@@ -1,0 +1,63 @@
+
+.header {
+  background-color: #1a1a2e; // Azul muy oscuro
+  color: #ffffff; // Color blanco para el texto
+  padding: 1.5rem 2.5rem; // Espaciado aumentado
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25); // Sombra más pronunciada
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1300px; // Ancho máximo aumentado
+    margin: 0 auto;
+  }
+
+  &__title {
+    font-family: 'Verdana', sans-serif; // Fuente moderna
+    font-size: 2rem; // Aumento del tamaño de la fuente
+    font-weight: 700; // Mayor grosor para el título
+  }
+
+  &__nav {
+    font-family: 'Arial', sans-serif; // Fuente moderna
+    display: flex;
+    gap: 2rem; // Mayor espacio entre enlaces
+
+    .header__link {
+      color: #b0bec5; // Gris claro
+      text-decoration: none;
+      font-size: 1.1rem; // Aumento del tamaño de la fuente
+      padding: 0.7rem 1.2rem; // Mayor espaciado interno
+      transition: color 0.4s ease, transform 0.3s ease; // Suavizar la transición de escala
+
+      &:hover {
+        color: #ffffff; // Color blanco al hacer hover
+        transform: scale(1.1); // Efecto de crecimiento
+      }
+
+      &.active {
+        border-bottom: 3px solid #00adb5; // Verde azulado para el borde activo
+      }
+    }
+
+    .header__logout {
+      font-weight: 600;
+      color: #ff4d4d; 
+    }
+  }
+
+  &__modal-btn {
+    background-color: #1d9aa0; // Verde azulado para el botón
+    color: #fff; // Color blanco para el texto
+    border: none;
+    padding: 0.7rem 1.5rem; // Espaciado interno aumentado
+    font-size: 1.1rem; // Aumento del tamaño de la fuente
+    cursor: pointer;
+    transition: background-color 0.4s ease; // Suavizar la transición del color de fondo
+
+    &:hover {
+      background-color: #009688; // Verde más oscuro al hacer hover
+    }
+  }
+}

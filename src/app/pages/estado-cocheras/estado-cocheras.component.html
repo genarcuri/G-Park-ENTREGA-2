@@ -1,0 +1,43 @@
+<app-header></app-header>
+
+<main class="flex-column-center">
+  <div class="tabla">
+    <div class="header-tabla">
+      <div class="header-item">Nro</div>
+      <div class="header-item">Disponibilidad</div>
+      <div class="header-item">Ingreso</div>
+      <div class="header-item">Acciones</div>
+    </div>
+
+    <div *ngFor="let fila of filas; let i = index" class="table-row">
+      <div class="table-cell">{{ fila.id }}</div>
+      <div class="table-cell disponibilidad-cell">
+        <span *ngIf="!fila.deshabilitada && !fila.activo" class="disponible" (click)="abrirModalNuevoEstacionamiento(fila.id)">
+          Disponible
+        </span>
+        <span *ngIf="fila.activo" class="activo" (click)="abrirModalCerrarEstacionamiento(fila.id, fila.activo.id)">
+          {{ fila.activo.patente }}
+        </span>
+        <span *ngIf="fila.deshabilitada && !fila.activo" class="ocupado">
+          No disponible
+        </span>
+      </div>
+      <div class="table-cell">
+        {{ fila.activo?.horaIngreso || fila.horaDeshabilitacion || '-' }}
+      </div>
+      <div class="table-cell acciones-container">
+        <button *ngIf="fila.deshabilitada" (click)="cambiarDisponibilidadCochera(fila.id, fila.deshabilitada)" class="action-button">
+          <img src="img/icons/ok.png" alt="Habilitar cochera">
+        </button>
+        <button *ngIf="!fila.deshabilitada" (click)="cambiarDisponibilidadCochera(fila.id, fila.deshabilitada)" class="action-button">
+          <img src="img/icons/prohibido.png" alt="Deshabilitar cochera">
+        </button>
+        <button (click)="eliminarCochera(fila.id)" class="action-button">
+          <img src="img/icons/contenedor-de-basura.png" alt="Eliminar cochera">
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <button (click)="agregarFila()" class="boton-resaltado" id="agregar-cochera">+</button>
+</main>

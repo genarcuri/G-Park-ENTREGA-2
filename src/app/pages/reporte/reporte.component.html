@@ -1,0 +1,22 @@
+<app-header></app-header>
+<body>
+    <main class="flex-column-center">
+        <div class="tabla">
+            <div class="header-tabla"> <!-- Clase para el encabezado -->
+                <div class="header-item">{{headerR.numero}}</div>
+                <div class="header-item">{{headerR.mes}}</div>
+                <div class="header-item">{{headerR.usos}}</div>
+                <div class="header-item">{{headerR.cobrado}}</div>
+            </div>
+
+            @for (reporte of reportes; track $index) {
+                <div class="cuerpo-tabla">
+                    <div class="filas">{{$index + 1}}</div>
+                    <div class="filas">{{reporte.mes}}</div>
+                    <div class="filas">{{reporte.usos}}</div>
+                    <div class="filas">{{reporte.cobrados}}</div>
+                </div>
+            }
+        </div>
+    </main>
+</body>
